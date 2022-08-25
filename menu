@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="stil.css">
+<?php
+function fc_activ_mnu($pag_activ) {
+	$fis_cur  = pathinfo($_SERVER['PHP_SELF'], PATHINFO_BASENAME);  
+  if($pag_activ == $fis_cur)  { echo 'active'; } 
+}
+?>
+<nav class="mnu">
+	<ul>
+		<li class="<?php fc_activ_mnu('index.php');?>"><a class="" href="index.php">Home</a></li>
+		<li class="<?php fc_activ_mnu('pag01s.php');?>"><a class="" href="pag01s.php">Page 1</a></li>
+		<li class="<?php fc_activ_mnu('pag02.php');?>"><a href="pag02.php" >Page 2</a></li>
+		<li class=""><a href="logout.php" >Logout</a></li>
+	</ul>		
+</nav>	
+<!-- Some descriptions can find at https://tic.ovio.ro/2022/08/18/active-menu-highlighted/ -->
